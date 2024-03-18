@@ -1,11 +1,12 @@
-from PySide6.QtWidgets import QApplication, QWidget, QLineEdit
+from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout
 
 
 class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
-        line = QLineEdit(self)
-        line.setPlaceholderText('请输入内容')
+
+        self.mainLayout = QVBoxLayout()
+        self.setLayout(self.mainLayout)
 
 
 if __name__ == '__main__':
